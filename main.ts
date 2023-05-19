@@ -1,4 +1,10 @@
 let Número = 0
+function P4P5P6 (_0o1: number) {
+    pins.digitalWritePin(DigitalPin.P4, _0o1)
+    pins.digitalWritePin(DigitalPin.P5, _0o1)
+    pins.digitalWritePin(DigitalPin.P6, _0o1)
+    return
+}
 basic.forever(function () {
     pins.digitalWritePin(DigitalPin.P2, 1)
     music.playTone(494, music.beat(BeatFraction.Whole))
@@ -20,7 +26,7 @@ basic.forever(function () {
     }
     basic.clearScreen()
     pins.digitalWritePin(DigitalPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P4, 1)
+    P4P5P6(1)
     music.playTone(262, music.beat(BeatFraction.Whole))
     basic.pause(20000)
     Número = 9
@@ -30,5 +36,5 @@ basic.forever(function () {
         Número += -1
     }
     basic.clearScreen()
-    pins.digitalWritePin(DigitalPin.P4, 0)
+    P4P5P6(0)
 })
