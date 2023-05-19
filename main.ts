@@ -6,6 +6,8 @@ function P4P5P6 (_0o1: number) {
     return
 }
 basic.forever(function () {
+    P4P5P6(0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
     pins.digitalWritePin(DigitalPin.P2, 1)
     music.playTone(494, music.beat(BeatFraction.Whole))
     basic.pause(10000)
@@ -16,6 +18,7 @@ basic.forever(function () {
         Número += -1
     }
     basic.clearScreen()
+    P4P5P6(0)
     pins.digitalWritePin(DigitalPin.P2, 0)
     pins.digitalWritePin(DigitalPin.P1, 1)
     Número = 2
@@ -25,6 +28,7 @@ basic.forever(function () {
         Número += -1
     }
     basic.clearScreen()
+    pins.digitalWritePin(DigitalPin.P2, 0)
     pins.digitalWritePin(DigitalPin.P1, 0)
     P4P5P6(1)
     music.playTone(262, music.beat(BeatFraction.Whole))
@@ -36,5 +40,4 @@ basic.forever(function () {
         Número += -1
     }
     basic.clearScreen()
-    P4P5P6(0)
 })
